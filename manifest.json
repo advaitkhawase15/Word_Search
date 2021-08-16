@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Wordsearch",
+    "description": "Quick word search",
+    "version": "1.0.0",
+    "browser_action": {
+        "default_popup": "index.html"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+M"
+            }
+        }
+    },
+    "background": {
+        "scripts":["get_text.js"]
+    },
+
+    // "content_script":[
+    //     {
+    //         "matches":["https://*/*","http://*/*"],
+    //         "js":["get_text.js"]
+    //     }
+    // ],
+    "permissions": [
+        "activeTab"
+    ]
+}
