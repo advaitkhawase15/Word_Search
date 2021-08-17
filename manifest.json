@@ -6,24 +6,20 @@
     "browser_action": {
         "default_popup": "index.html"
     },
-    "commands": {
-        "_execute_action": {
-            "suggested_key": {
-                "default": "Ctrl+M"
-            }
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
         }
-    },
+    ],
     "background": {
-        "scripts":["get_text.js"]
-    },
-
-    // "content_script":[
-    //     {
-    //         "matches":["https://*/*","http://*/*"],
-    //         "js":["get_text.js"]
-    //     }
-    // ],
-    "permissions": [
-        "activeTab"
-    ]
+        "scripts": [
+            "app.js"
+        ],
+        "persistent": false
+    }
 }
