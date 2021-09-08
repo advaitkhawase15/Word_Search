@@ -6,20 +6,41 @@
     "browser_action": {
         "default_popup": "index.html"
     },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
     "content_scripts": [
         {
             "matches": [
                 "<all_urls>"
             ],
+            "css": [
+                "hover_box.js"
+            ],
             "js": [
-                "content.js"
+                "contentscript.js",
+                "jquery-3.6.0.min.js"
             ]
         }
     ],
-    "background": {
-        "scripts": [
-            "app.js"
-        ],
-        "persistent": false
-    }
+    "web_accessible_resources": [
+        "hover_box.js",
+        "hover_box.css"
+    ],
+    "commands": {
+        "TextRead": {
+            "suggested_key": {
+                "default": "Ctrl+M",
+                "mac": "Command+M"
+            },
+            "description": "Selected text"
+        }
+    },
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ]
 }

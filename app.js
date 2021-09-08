@@ -1,6 +1,5 @@
 const https = require("https");
 const express = require("express");
-const { response } = require("express");
 const app = express();
 const port = 3000;
 
@@ -27,9 +26,9 @@ app.use(
     })
 )
 
-// app.use(express.json())
+app.use(express.json())
 var result = [], response_statusCode = "", selectedText = "";
-app.post('/', (req, res) => {
+app.post('/',(req, res) => {
     selectedText = req.body.fname;
     word_search(selectedText);
     setTimeout(() => {
@@ -50,6 +49,19 @@ app.post('/', (req, res) => {
 // var selectedText = "greed";
 // word_search(selectedText);
 // word_search();
+// chrome.runtime.onMessage.addListener(
+//     function (request, sender, sendResponse) {
+//         if (request.cmd == "any command") {
+//             sendResponse({ result: "background response" });
+//             // console.log(request);
+//         } else {
+//             sendResponse({ result: "error", message: `Invalid 'cmd'` });
+//         }
+//         // Note: Returning true is required here!
+//         //  ref: http://stackoverflow.com/questions/20077487/chrome-extension-message-passing-response-not-sent
+//         return true;
+//     }
+// );
 
 function word_search(text) {
     const url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + text;

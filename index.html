@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Mukta', sans-serif !important;
+            font-size: medium;
+            padding: 5px;
+            width: 190px;
+        }
+    
+        .bold {
+            font-weight: 600;
+        }
+    
+        .titles {
+            margin: 5px 0;
+        }
+    </style>
     <title>Document</title>
 </head>
+
 <body>
-    <form action="/" method="post">
-        <label for="fname">Word:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <input type="submit" value="Submit">
-      </form>
+    <div id="title" class="bold titles">Word:</div>
+    <input type="text" id="word" name="fname"><br><br>
+    <input type="submit" id="search" value="Search">
 </body>
-<script src="content.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="popup.js"></script>
+
 </html>

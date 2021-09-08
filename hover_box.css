@@ -1,0 +1,30 @@
+#chrome_extension_hoverbox {
+    border: 1px grey solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    display: none;
+    font-family: 'Mukta', sans-serif !important;
+    font-size: medium;
+    padding: 5px;
+    position: absolute;
+    width: 190px;
+    z-index: 9999;
+}
+#chrome_extension_hoverbox .bold{
+    font-weight: 600;
+}
+#chrome_extension_hoverbox .titles{
+    margin: 5px 0;
+}
+/* #chrome_extension_hoverbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-bottom-color:white;
+    border-top: 0;
+    margin-left: -6px;
+    margin-top: -12px;
+  } */
