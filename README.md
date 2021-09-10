@@ -12,4 +12,4 @@ There are two way you can use it:
 2. Select the word and press `Ctrl + M`. A hover box will appear when your cursor will move over the selected text with the related result.To remove, click anywhere in the window.     
 ## Contribute
 
-To contribute you can fork this repository and start contributing as you wish. If you are new to extension, I would suggest you to go through [Extension-Chrome Developers Documentation](https://developer.chrome.com/docs/extensions] for a better understanding. 
+To contribute you can fork this repository and start contributing as you wish. If you are new to extension, I would suggest you to go through [Extension-Chrome Developers Documentation](https://developer.chrome.com/docs/extensions) for a better understanding. 
