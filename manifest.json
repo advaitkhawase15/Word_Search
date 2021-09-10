@@ -17,9 +17,6 @@
             "matches": [
                 "<all_urls>"
             ],
-            "css": [
-                "hover_box.js"
-            ],
             "js": [
                 "contentscript.js",
                 "jquery-3.6.0.min.js"
@@ -27,7 +24,6 @@
         }
     ],
     "web_accessible_resources": [
-        "hover_box.js",
         "hover_box.css"
     ],
     "commands": {
