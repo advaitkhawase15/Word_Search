@@ -2,13 +2,18 @@
     "manifest_version": 2,
     "name": "Wordsearch",
     "description": "Quick word search",
+    "icons": {
+        "128": "icons/res/mipmap-xxhdpi/word_search_icons.png",
+        "48": "icons/res/mipmap-mdpi/word_search_icons.png",
+        "16": "icons/res/mipmap-mdpi/word_search_icons.png"
+    },
     "version": "1.0.0",
     "browser_action": {
-        "default_popup": "index.html"
+        "default_popup": "html/index.html"
     },
     "background": {
         "scripts": [
-            "background.js"
+            "js/background.js"
         ],
         "persistent": false
     },
@@ -18,13 +23,13 @@
                 "<all_urls>"
             ],
             "js": [
-                "contentscript.js",
-                "jquery-3.6.0.min.js"
+                "js/contentscript.js",
+                "js/jquery-3.6.0.min.js"
             ]
         }
     ],
     "web_accessible_resources": [
-        "hover_box.css"
+        "css/hover_box.css"
     ],
     "commands": {
         "TextRead": {

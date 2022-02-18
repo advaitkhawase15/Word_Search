@@ -6,7 +6,7 @@ document.body.appendChild(html_injection);
 
 //Setting up the CSS for the Hover box
 var link = document.createElement('link');
-link.href = chrome.extension.getURL('hover_box.css');
+link.href = chrome.extension.getURL('/css/hover_box.css');
 link.rel = 'stylesheet';
 document.getElementsByTagName("head")[0].appendChild(link);
 
@@ -14,12 +14,14 @@ chrome.runtime.onMessage.addListener(
     function (msg) {
         if (msg.from === "background_result") {
             var result = msg.result;
+
             //taking the highlighted text
             var highlight = window.getSelection();
             const range = window.getSelection().getRangeAt(0);
 
             if (highlight.toString().length > 1) {
-                //creating a new element span
+                
+                //creating a new element span .highlight
                 var newElement = document.createElement("span");
                 newElement.setAttribute("class", "highlight");
                 range.surroundContents(newElement);
@@ -70,6 +72,7 @@ chrome.runtime.onMessage.addListener(
                 });
             }
             $(document).click(function () {
+
                 // removing the span's
                 $('.highlight').contents().unwrap();
                 $("#chrome_extension_hoverbox").css("display", "none");

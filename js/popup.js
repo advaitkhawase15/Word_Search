@@ -1,17 +1,16 @@
-console.log("here it is");
-
+// Detecting when the search button is clicked in index.html
 $("#search").click(function () {
     var word = $("#word").val();
     chrome.runtime.sendMessage({ from: "popup", word: word });
-    console.log(word);
 })
 
+// Handling the reponse message from background.js
 chrome.runtime.onMessage.addListener(function (msg) {
     if (msg.from == 'background_result') {
-        console.log(msg.result[0]);
         var result = msg.result;
+
+        // Showing the result in index.html 
         if (result[0] === 200){
-            console.log(result[3]);
             $("body").html(
                 `<div id="word" class="titles"><span class="bold">Word: </span>` + result[1] + `</div>
                 <div id="meaning" class="titles"><span class="bold">Meaning: </span>` + result[3] + `</div>`
